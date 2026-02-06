@@ -7,7 +7,7 @@ export function Footer() {
         {/* Column 1 — Brand */}
         <div>
           <p className="font-serif text-2xl font-bold tracking-wide text-[#f7efe6]">
-            LEKRI
+            Din Logga
           </p>
           <p className="mt-3 text-sm leading-relaxed">
             {siteMeta.tagline} i {siteMeta.location} &mdash; personliga
@@ -58,7 +58,7 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-[#f7efe6]/10">
         <div className="mx-auto max-w-site px-5 py-5 text-center text-xs text-[#f7efe6]/40 lg:px-8">
-          &copy; 2026 Lekri. Alla rättigheter förbehållna.
+          &copy; 2026 Din Logga. Alla rättigheter förbehållna.
         </div>
       </div>
     </footer>

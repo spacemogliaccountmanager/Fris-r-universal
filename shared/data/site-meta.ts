@@ -3,7 +3,7 @@ export const siteMeta = {
   tagline: "Frisörsalong",
   description:
     "Lekri frisörsalong i Sandviken med personliga klippningar, färg och styling. Boka tid direkt via vår widget.",
-  email: "hej@lekri.se",
+  email: "Info@minsalong.se",
   phone: "070-000 00 00",
   location: "Sandviken",
   country: "Sverige",
