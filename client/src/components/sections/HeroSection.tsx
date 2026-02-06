@@ -30,14 +30,11 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen overflow-hidden">
       {/* Background image */}
-      <picture>
-        <source srcSet="/assets/hero-mobile.jpg" media="(max-width: 640px)" />
-        <img
-          src="/assets/hero.jpg"
-          alt="Lekri frisörsalong"
-          className="hero-image absolute inset-0 h-full w-full object-cover"
-        />
-      </picture>
+      <img
+        src="/assets/salong-headzone-radmansgatan-18.webp"
+        alt="Salong Headzone"
+        className="hero-image absolute inset-0 h-full w-full object-cover"
+      />
 
       {/* Dark gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />

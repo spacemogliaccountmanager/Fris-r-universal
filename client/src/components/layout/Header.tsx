@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useBooking } from "@/components/booking/BookingProvider";
 import { siteMeta } from "@shared/data/site-meta";
@@ -6,17 +6,16 @@ import { cn } from "@/lib/cn";
 import { MobileNav } from "./MobileNav";
 
 const NAV_LINKS = [
-  { label: "Om oss", href: "#om" },
-  { label: "Våra tjänster", href: "#tjanster" },
-  { label: "Våra produkter", href: "#produkter" },
-  { label: "Kontakta oss", href: "#kontakt" },
+  { label: "Om oss", href: "/om" },
+  { label: "Våra tjänster", href: "/tjanster" },
+  { label: "Våra produkter", href: "/produkter" },
+  { label: "Kontakta oss", href: "/kontakt" },
 ] as const;
 
 export function Header() {
   const { setOpen } = useBooking();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [logoError, setLogoError] = useState(false);
 
   useEffect(() => {
     function handleScroll() {
@@ -28,41 +27,19 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavClick = useCallback(
-    (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-      e.preventDefault();
-      const id = href.replace("#", "");
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-      setMobileOpen(false);
-    },
-    [],
-  );
-
   return (
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-        scrolled ? "bg-bg/95 backdrop-blur-md shadow-card-sm" : "bg-transparent",
+        scrolled ? "bg-neutral-900/95 backdrop-blur-md shadow-card-sm" : "bg-transparent",
       )}
     >
       <div className="mx-auto flex max-w-site items-center justify-between px-5 py-4 lg:px-8">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2" aria-label="Lekri hem">
-          {logoError ? (
-            <span className="font-serif text-2xl font-bold tracking-wide text-white">
-              LEKRI
-            </span>
-          ) : (
-            <img
-              src="/assets/logo-white.png"
-              alt="Lekri"
-              className="h-8 w-auto"
-              onError={() => setLogoError(true)}
-            />
-          )}
+        <a href="/" className="flex items-center gap-2" aria-label="Hem">
+          <span className="font-serif text-2xl font-bold tracking-wide text-white">
+            Din Logga
+          </span>
         </a>
 
         {/* Desktop nav */}
@@ -71,12 +48,10 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              onClick={(e) => handleNavClick(e, link.href)}
+              onClick={() => setMobileOpen(false)}
               className={cn(
                 "text-sm font-medium transition-colors duration-200",
-                scrolled
-                  ? "text-ink-soft hover:text-ink"
-                  : "text-white/80 hover:text-white",
+                "text-white/80 hover:text-white",
               )}
             >
               {link.label}
@@ -92,12 +67,7 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className={cn(
-              "hidden h-9 w-9 items-center justify-center rounded-full transition-colors sm:flex",
-              scrolled
-                ? "text-ink-soft hover:text-ink"
-                : "text-white/70 hover:text-white",
-            )}
+            className="hidden h-9 w-9 items-center justify-center rounded-full transition-colors sm:flex text-white/70 hover:text-white"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -119,12 +89,7 @@ export function Header() {
           <a
             href={`mailto:${siteMeta.email}`}
             aria-label="Skicka e-post"
-            className={cn(
-              "hidden h-9 w-9 items-center justify-center rounded-full transition-colors sm:flex",
-              scrolled
-                ? "text-ink-soft hover:text-ink"
-                : "text-white/70 hover:text-white",
-            )}
+            className="hidden h-9 w-9 items-center justify-center rounded-full transition-colors sm:flex text-white/70 hover:text-white"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -157,12 +122,7 @@ export function Header() {
             onClick={() => setMobileOpen((prev) => !prev)}
             aria-label={mobileOpen ? "Stäng meny" : "Öppna meny"}
             aria-expanded={mobileOpen}
-            className={cn(
-              "flex h-10 w-10 items-center justify-center rounded-full transition-colors lg:hidden",
-              scrolled
-                ? "text-ink hover:bg-bg-deep"
-                : "text-white hover:bg-white/10",
-            )}
+            className="flex h-10 w-10 items-center justify-center rounded-full transition-colors lg:hidden text-white hover:bg-white/10"
           >
             {mobileOpen ? (
               <svg
