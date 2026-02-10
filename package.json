@@ -7,15 +7,15 @@
     "node": ">=20"
   },
   "scripts": {
-    "dev": "tsx server/src/index.ts",
-    "build": "vite build && tsc -p tsconfig.server.json",
+    "dev": "tsx client/src/index.ts",
+    "build": "vite build && tsc -p tsconfig.json",
     "start": "node dist/server/server/src/index.js",
     "preview": "npm run build && npm run start",
     "lint": "prettier --check .",
     "format": "prettier --write .",
     "test": "vitest",
     "test:run": "vitest run",
-    "typecheck": "tsc --noEmit -p tsconfig.client.json && tsc --noEmit -p tsconfig.server.json"
+    "typecheck": "tsc --noEmit -p tsconfig.client.json"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
