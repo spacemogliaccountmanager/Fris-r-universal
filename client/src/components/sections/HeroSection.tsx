@@ -28,7 +28,7 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative min-h-[70vh] overflow-hidden sm:min-h-screen">
       {/* Background image */}
       <img
         src="/assets/salong-headzone-radmansgatan-18.webp"
@@ -43,11 +43,11 @@ export function HeroSection() {
       <div
         ref={contentRef}
         data-reveal
-        className="relative z-10 flex min-h-screen flex-col justify-end px-6 pb-20"
+        className="relative z-10 flex min-h-[70vh] flex-col justify-start px-6 pb-20 pt-36 sm:min-h-screen sm:justify-end sm:pt-0"
       >
         <div className="mx-auto w-full max-w-site">
           <p className="mb-4 font-sans text-xs uppercase tracking-wider text-white/70">
-            Lekri frisörsalong
+            Min frisörsalong
           </p>
 
           <h1 className="mb-4 font-serif text-5xl font-bold text-white md:text-7xl">
@@ -79,17 +79,17 @@ export function HeroSection() {
         data-reveal
         className="relative z-10 px-6 pb-12"
       >
-        <div className="mx-auto flex max-w-site flex-wrap items-center gap-8">
+        <div className="mx-auto flex max-w-site items-center gap-4 sm:gap-8">
           {STATS.map((stat, i) => (
-            <div key={stat.label} className="flex items-center gap-8">
+            <div key={stat.label} className="flex items-center gap-4 sm:gap-8">
               {i > 0 && (
                 <div className="h-10 w-px bg-white/20" aria-hidden="true" />
               )}
               <div className="flex flex-col">
-                <span className="font-serif text-3xl font-bold text-white">
+                <span className="font-serif text-2xl font-bold text-white sm:text-3xl">
                   {stat.value}
                 </span>
-                <span className="text-xs uppercase tracking-wider text-white/60">
+                <span className="text-[10px] uppercase tracking-wider text-white/60 sm:text-xs">
                   {stat.label}
                 </span>
               </div>

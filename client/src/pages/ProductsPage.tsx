@@ -5,7 +5,7 @@ export function ProductsPage() {
   return (
     <>
       <Helmet>
-        <title>Våra produkter — Lekri Salong</title>
+        <title>Våra produkter — Din Salong</title>
         <meta name="description" content="Bläddra genom vårt urval av högkvalitativa hårvårdsprodukter." />
       </Helmet>
 

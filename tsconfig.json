@@ -13,6 +13,7 @@
     "declarationMap": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "jsx": "react-jsx",
     "paths": {
       "@/*": ["client/src/*"],
       "@shared/*": ["shared/*"]

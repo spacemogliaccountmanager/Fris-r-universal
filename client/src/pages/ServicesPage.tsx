@@ -5,7 +5,7 @@ export function ServicesPage() {
   return (
     <>
       <Helmet>
-        <title>Våra tjänster — Lekri Salong</title>
+        <title>Våra tjänster — Din Salong</title>
         <meta name="description" content="Utforska våra frisörtjänster och se vad vi kan erbjuda." />
       </Helmet>
 

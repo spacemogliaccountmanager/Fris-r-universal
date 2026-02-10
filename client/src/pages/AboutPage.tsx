@@ -5,8 +5,8 @@ export function AboutPage() {
   return (
     <>
       <Helmet>
-        <title>Om oss — Lekri Salong</title>
-        <meta name="description" content="Läs mer om Lekri Salong och vår historia." />
+        <title>Om oss — Din Salong</title>
+        <meta name="description" content="Läs mer om  Salong och vår historia." />
       </Helmet>
 
       <main className="pt-20">

@@ -20,7 +20,7 @@ export function AboutSection() {
         {/* Text column */}
         <div ref={textRef} data-reveal>
           <p className="mb-4 font-sans text-xs font-medium uppercase tracking-[0.08em] text-accent">
-            Om Lekri
+            Om salongen
           </p>
 
           <h2 className="mb-6 font-serif text-4xl font-semibold leading-tight text-ink md:text-5xl">
@@ -28,7 +28,7 @@ export function AboutSection() {
           </h2>
 
           <p className="mb-4 text-ink-soft">
-            Lekri är en frisörsalong där lugn och precision möts. Vi arbetar med
+            En frisörsalong där lugn och precision möts. Vi arbetar med
             lyhörda konsultationer, tydliga planer och resultat som håller över
             tid.
           </p>
@@ -60,7 +60,7 @@ export function AboutSection() {
             <div className="overflow-hidden rounded-lg shadow-card">
               <img
                 src="/assets/hero.jpg"
-                alt="Lekri salong interiör"
+                alt="Din salong interiör"
                 className="h-auto w-full object-cover"
               />
             </div>

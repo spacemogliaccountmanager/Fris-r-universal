@@ -15,6 +15,6 @@ export const siteMeta = {
   booking: {
     widgetId: "08cf53ba",
     iframeUrl:
-      "https://www.bookd.se/book/08cf53ba?primary=fd8181&headerBg=ffffff&headerIcons=323232&layout=list&lang=swedish&textSize=big&prices=1&areaStep=0&start=employee",
+      "https://www.bookd.se/book/08cf53ba?primary=fd8181&headerBg=171717&headerIcons=ffffff&layout=list&lang=swedish&textSize=big&prices=1&areaStep=0&start=employee",
   },
 } as const;

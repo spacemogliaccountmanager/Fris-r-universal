@@ -16,7 +16,7 @@ export function StudioSection() {
         {/* Left column */}
         <div ref={leftRef} data-reveal>
           <p className="mb-4 font-sans text-xs font-medium uppercase tracking-[0.08em] text-accent">
-            Lekri upplevelsen
+            Upplevelsen
           </p>
 
           <h2 className="mb-6 font-serif text-4xl font-semibold leading-tight md:text-5xl">

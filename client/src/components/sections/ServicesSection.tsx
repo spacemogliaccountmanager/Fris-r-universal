@@ -39,7 +39,7 @@ export function ServicesSection() {
 
         {/* Services grid */}
         {services && services.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-12">
             {services.map((service, index) => (
               <ServiceCard key={service.id} service={service} index={index} />
             ))}
@@ -66,12 +66,12 @@ function ServiceCard({
       style={{ transitionDelay: `${index * 0.08}s` }}
     >
       <Card hover className="h-full">
-        <h3 className="font-serif text-xl font-semibold text-ink">
+        <h3 className="font-serif text-base font-semibold text-ink sm:text-xl">
           {service.title}
         </h3>
-        <p className="text-muted text-sm mt-2">{service.description}</p>
-        <div className="h-px bg-line my-4" />
-        <div className="flex items-center gap-2 flex-wrap">
+        <p className="text-muted text-xs mt-1 sm:text-sm sm:mt-2">{service.description}</p>
+        <div className="h-px bg-line my-2 sm:my-4" />
+        <div className="flex items-center gap-1.5 flex-wrap sm:gap-2">
           <Badge variant="muted">{service.durationMinutes} min</Badge>
           <Badge variant="default">{service.priceLabel}</Badge>
         </div>

@@ -20,24 +20,11 @@ export function MobileNav({
   links,
   onBookClick,
 }: MobileNavProps) {
-  function handleLinkClick(
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string,
-  ) {
-    e.preventDefault();
-    const id = href.replace("#", "");
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-    onOpenChange(false);
-  }
-
   return (
     <Collapsible.Root open={open} onOpenChange={onOpenChange}>
       <Collapsible.Content
         className={cn(
-          "overflow-hidden border-b border-line bg-bg lg:hidden",
+          "overflow-hidden border-b border-white/10 bg-neutral-900 lg:hidden",
           "data-[state=open]:animate-in data-[state=open]:fade-in data-[state=open]:slide-in-from-top-2",
           "data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=closed]:slide-out-to-top-2",
         )}
@@ -47,8 +34,8 @@ export function MobileNav({
             <a
               key={link.href}
               href={link.href}
-              onClick={(e) => handleLinkClick(e, link.href)}
-              className="rounded-md px-3 py-2.5 text-sm font-medium text-ink-soft transition-colors hover:bg-bg-deep hover:text-ink"
+              onClick={() => onOpenChange(false)}
+              className="rounded-md px-3 py-2.5 text-sm font-medium text-white/70 transition-colors hover:bg-white/10 hover:text-white"
             >
               {link.label}
             </a>

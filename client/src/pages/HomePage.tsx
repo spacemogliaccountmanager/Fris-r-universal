@@ -11,7 +11,7 @@ export function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Hem — Lekri Salong</title>
+        <title>Hem — Din Salong</title>
       </Helmet>
 
       <main>

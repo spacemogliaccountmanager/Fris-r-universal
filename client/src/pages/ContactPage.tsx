@@ -5,7 +5,7 @@ export function ContactPage() {
   return (
     <>
       <Helmet>
-        <title>Kontakta oss — Lekri Salong</title>
+        <title>Kontakta oss — Din Salong</title>
         <meta name="description" content="Kontakta oss för mer information eller för att boka en tid." />
       </Helmet>
 
