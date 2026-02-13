@@ -1,11 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { apiFetch } from "@/lib/api";
-import type { Service, ApiResponse } from "@shared/types";
+import { services } from "@shared/data/services";
 
 export function useServices() {
   return useQuery({
     queryKey: ["services"],
-    queryFn: () => apiFetch<ApiResponse<Service[]>>("/services"),
-    select: (response) => response.data,
+    queryFn: () => services,
   });
 }

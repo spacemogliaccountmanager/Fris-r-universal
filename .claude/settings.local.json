@@ -3,7 +3,9 @@
     "allow": [
       "Bash(dir:*)",
       "Bash(tree:*)",
-      "Bash(pnpm typecheck:*)"
+      "Bash(pnpm typecheck:*)",
+      "Bash(Get-ChildItem -Path \"client/src\" -Recurse -Include \"*.js\",\"*.js.map\",\"*.d.ts\",\"*.d.ts.map\")",
+      "Bash(Remove-Item -Force)"
     ]
   }
 }

@@ -40,13 +40,13 @@ export function AboutSection() {
 
           <div className="flex flex-wrap gap-4">
             <Button
-              variant="ghost"
+              variant="solid"
               onClick={(e) => handleSmoothScroll(e, "#tjanster")}
             >
               Utforska tjänster
             </Button>
             <Button
-              variant="ghost"
+              variant="solid"
               onClick={(e) => handleSmoothScroll(e, "#kontakt")}
             >
               Prata med oss

@@ -78,7 +78,7 @@ function ProductCard({
           <img
             src={`/assets/${product.image}`}
             alt={product.name}
-            className="object-cover w-full h-full"
+            className="object-contain w-full h-full"
             loading="lazy"
           />
         </div>
